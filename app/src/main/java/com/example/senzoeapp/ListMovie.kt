@@ -23,6 +23,7 @@ class ListMovie : AppCompatActivity() {
         val rvUser: RecyclerView = findViewById(R.id.recyclerview)
         getMovieNew(rvUser)
     }
+
     fun getMovieNew(recyclerView: RecyclerView){
         val request = ServiceBuilder.buildService(TmdbEndpoints::class.java)
         val call = request.getMovies(getString(R.string.api_key))
